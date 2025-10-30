@@ -1,27 +1,38 @@
-# Azure Infrastructure Setup
+# Infrastructure Notes
 
-## Overview
-This section documents the foundational Azure environment for the Cloud SOC build.
+## Resource Names
+- Resource Group: rg-soc-lab
+- Virtual Network: vnet-soc
+- Subnet: subnet-soc
 
-## Resource Group
-- **Name:** rg-soc-lab  
-- **Region:** Central India  
-- **Purpose:** Logical container for all SOC lab components  
+## Naming Convention
+All resources follow the pattern `<type>-<component>-<env>`  
+Example: `vm-sysmon-lab`, `law-soc`, `rg-soc-lab`
 
-## Virtual Network
-- **Name:** vnet-soc  
-- **Address Space:** 10.0.0.0/16  
-- **Subnet:** subnet-soc (10.0.1.0/24)
+## Next Steps
+- Deploy Log Analytics Workspace
+- Enable Microsoft Sentinel
+- Configure diagnostic settings
 
-## Visual Proof
-### Resource Group
-![Resource Group Overview](./screenshots/resource-group-overview.png)
+## Azure Networking Setup
+- Resource Group: rg-soc-lab (Central India)
+- Virtual Network: vnet-soc (10.0.0.0/16)
+- Subnet: subnet-soc (10.0.1.0/24)
+- Status: Deployed successfully via Azure Portal
 
-### Virtual Network
-![Virtual Network Overview](./screenshots/vnet-overview.png)
+## Log Analytics Workspace & Microsoft Sentinel
 
-### Subnet
-![Subnet SOC](./screenshots/subnet-soc.png)
+### Log Analytics Workspace
+- Name: law-soc
+- Region: Central India
+- Resource Group: rg-soc-lab
+- Purpose: Central log storage and analytics query engine for SOC data.
 
-## Status
-✅ Successfully created via Azure Portal and verified.
+### Microsoft Sentinel
+- Connected Workspace: law-soc
+- Function: SIEM + SOAR platform for detection, investigation & automation.
+- Status: Deployed and verified.
+
+### Visuals
+![LAW Overview](./screenshots/law-soc-overview.png)
+![Sentinel Overview](./screenshots/sentinel-overview.png)
