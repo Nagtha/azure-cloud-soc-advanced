@@ -1,5 +1,3 @@
-# azure-cloud-soc-advanced
-Advanced Azure Cloud SOC Project —  build for end-to-end detection, automation, threat intel, and MITRE ATT&amp;CK-mapped security monitoring.
 # Azure Cloud SOC — Advanced
 End-to-end Azure SOC lab demonstrating detection, automation, MITRE ATT&CK mapping, threat intelligence, endpoint telemetry, and DevSecOps IaC.
 
