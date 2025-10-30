@@ -1,22 +1,27 @@
-# Infrastructure Notes
+# Azure Infrastructure Setup
 
-## Resource Names
-- Resource Group: rg-soc-lab
-- Virtual Network: vnet-soc
-- Subnet: subnet-soc
+## Overview
+This section documents the foundational Azure environment for the Cloud SOC build.
 
-## Naming Convention
-All resources follow the pattern `<type>-<component>-<env>`  
-Example: `vm-sysmon-lab`, `law-soc`, `rg-soc-lab`
+## Resource Group
+- **Name:** rg-soc-lab  
+- **Region:** Central India  
+- **Purpose:** Logical container for all SOC lab components  
 
-## Next Steps
-- Deploy Log Analytics Workspace
-- Enable Microsoft Sentinel
-- Configure diagnostic settings
+## Virtual Network
+- **Name:** vnet-soc  
+- **Address Space:** 10.0.0.0/16  
+- **Subnet:** subnet-soc (10.0.1.0/24)
 
-## Azure Networking Setup
-- Resource Group: rg-soc-lab (Central India)
-- Virtual Network: vnet-soc (10.0.0.0/16)
-- Subnet: subnet-soc (10.0.1.0/24)
-- Status: Deployed successfully via Azure Portal
+## Visual Proof
+### Resource Group
+![Resource Group Overview](./screenshots/resource-group-overview.png)
 
+### Virtual Network
+![Virtual Network Overview](./screenshots/vnet-overview.png)
+
+### Subnet
+![Subnet SOC](./screenshots/subnet-soc.png)
+
+## Status
+✅ Successfully created via Azure Portal and verified.
